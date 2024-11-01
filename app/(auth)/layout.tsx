@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import '../globals.css'
 
 const NavLinks = [
   { name: "Register", href: "/signup" },
@@ -17,16 +18,20 @@ export default function AuthLayout({
   const pathname = usePathname();
 
   return (
-    <>
-      {NavLinks.map((link) => {
+    <html>
+    <body>
+    <header>
+    {NavLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
         return (
-          <Link href={link.href} key={link.name} className={isActive ? "text-blue-800" : "text-black"}>
+          <Link href={link.href} key={link.name} className={isActive ? "text-blue-800 p-6" : "text-black p-6"}>
             {link.name}
           </Link>
         );
       })}
-      <div>{children}</div>
-    </>
+    </header>
+    {children}
+    </body>  
+    </html>
   );
 }
