@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import '../globals.css'
 
 export const metadata: Metadata = {
   title: "products",
@@ -11,10 +12,10 @@ export default function ProductLayout ({
   children: React.ReactNode;
 }>) {
   return(
-    <>
+    <html lang="en">
      <body>
           {children}
     </body>
-    </>
+    </html>
   )
 }

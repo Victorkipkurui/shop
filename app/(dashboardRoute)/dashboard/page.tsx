@@ -1,9 +1,14 @@
-export default function DasboardAnalysis () {
-  return(
-    <>
-      <h1>KPIs</h1>
-      <h1>Bar Graph</h1>
-      <h1>Pie Chart</h1>
-    </>
+import React from 'react'
+import "../../globals.css"
+
+const dashboardPage = () => {
+  return (
+    <div>
+      <div>
+        <h1>dashboard</h1>
+      </div>
+    </div>
   )
 }
+
+export default dashboardPage
