@@ -1,10 +1,9 @@
+import Card from '@/app/components/card'
 import React from 'react'
 
 const Expenses = () => {
   return (
-    <div>
-      <h1>Expenses</h1>
-    </div>
+    <Card> Expenses </Card>
   )
 }
 

@@ -1,5 +1,7 @@
+import Card from "@/app/components/card";
+
 export default function revenue () {
   return(
-    <h1>Revenue</h1>
+    <Card>Revenue</Card>
   )
 }

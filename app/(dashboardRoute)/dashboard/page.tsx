@@ -1,13 +1,24 @@
 import React from 'react'
 import "../../globals.css"
 
-const dashboardPage = () => {
+const dashboardPage = ({ 
+  expenses,
+  notifications, 
+  revenue,
+}: {
+  children: React.ReactNode,
+  expenses: React.ReactNode
+  notifications: React.ReactNode
+  revenue: React.ReactNode
+}) => {
   return (
-    <div>
-      <div>
-        <h1>dashboard</h1>
-      </div>
-    </div>
+ <html>
+  <body>
+    <div>{revenue}</div>
+    <div>{notifications}</div>
+    <div>{expenses}</div>
+  </body>
+ </html>
   )
 }
 
