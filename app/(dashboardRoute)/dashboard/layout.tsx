@@ -8,19 +8,29 @@ export default function RootLayout({
   expenses,
   notifications, 
   revenue,
+  login,
 }: {
   children: React.ReactNode,
-  expenses: React.ReactNode
-  notifications: React.ReactNode
-  revenue: React.ReactNode
+  expenses: React.ReactNode,
+  notifications: React.ReactNode,
+  revenue: React.ReactNode,
+  login: React.ReactNode
 }) {
-  return (
-    <html lang="en">
+  const isLoggedIn = true;
+  return  isLoggedIn ? (
+    <html>
       <body>
         <div>{children}</div>
         <div>{expenses}</div>
         <div>{notifications}</div>
         <div>{revenue}</div>
+        <div>{login}</div>
+      </body>
+    </html>
+  ) : (
+    <html>
+      <body>
+        <div>{login}</div>
       </body>
     </html>
   )
